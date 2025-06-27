@@ -1,0 +1,202 @@
+/* Reset and Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #ffe8e0, #f8f4f2);
+    color: #3d3d3d;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: transparent;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a14c4c;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid #a14c4c;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login {
+    background: transparent;
+    color: #a14c4c;
+  }
+  
+  .signup {
+    background: #a14c4c;
+    color: #fff;
+  }
+  
+  .btn:hover {
+    opacity: 0.85;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    min-height: 80vh;
+  }
+  
+  .hero-left {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .hero-left h1 {
+    font-size: 48px;
+    color: #5e2e2e;
+    margin-bottom: 20px;
+  }
+  
+  .hero-left p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #444;
+  }
+  
+  .cta-btn {
+    background: #a14c4c;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-right img {
+    width: 100%;
+    max-width: 480px;
+  }
+  /* Popular Section */
+.populars {
+    padding: 80px 60px;
+    text-align: center;
+    background: linear-gradient(to right, #fbe8e7, #f7f5f4);
+  }
+  
+  .populars h2 {
+    font-size: 40px;
+    color: #5e2e2e;
+    margin-bottom: 40px;
+  }
+  
+  .popular-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .popular-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .popular-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  
+  .popular-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .popular-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #a14c4c;
+  }
+  
+  .popular-card p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .card-btn {
+    background: #a14c4c;
+    color: #fff;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  .baker-note {
+    background: linear-gradient(to bottom right, #fff4f4, #fef7f2);
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+  }
+  
+  .note-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+  
+  .baker-note h2 {
+    font-size: 36px;
+    color: #a14c4c;
+    margin-bottom: 20px;
+  }
+  
+  .baker-note p {
+    font-size: 18px;
+    color: #4b3b3b;
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+  
