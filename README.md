@@ -1,12 +1,6 @@
-## HTML Simple Template
+## A bakeryu with love from Diksha!
 
-This is a simple HTML template that can be used to create a simple HTML page(s).
+"Responsive bakery website with interactive menu, add-to-cart functionality, and elegant UI built using HTML, CSS, and JavaScript."
 
 ## How to run
 
-1. Run the follwing command in your terminal:
-```bash
-live-server --no-browser
-```
-
-2. Refresh the URL in simple browser to see the output
