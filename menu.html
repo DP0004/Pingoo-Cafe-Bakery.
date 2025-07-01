@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Pingoo Cafe & Bakery</title>
+  <link rel="stylesheet" href="herostyle.css" />
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">🍰 Pingoo Cafe</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#">Sign In</a>
+      <a href="#">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <h1>Our Menu</h1>
+
+    <div class="menu-category">
+      <h2>🍰 Cakes</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/blackforest.jpg" alt="Black Forest Cake" />
+          <h3>Black Forest</h3>
+          <p>Rich chocolate cake layered with cherries and whipped cream.</p>
+          <span class="price">₹450</span>
+          <button class="order-btn">Order Now</button>
+        </div>
+        <!-- Add more cake items -->
+      </div>
+    </div>
+
+    <div class="menu-category">
+      <h2>🧁 Pastries</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/lava-pastry.png" alt="Lava Pastry" />
+          <h3>Lava Pastry</h3>
+          <p>Molten center chocolate delight baked fresh daily.</p>
+          <span class="price">₹120</span>
+          <button class="order-btn"onclick="addToCart('lava pastry', 250)">Order Now</button>
+        </div>
+        <!-- Add more pastry items -->
+      </div>
+    </div>
+
+    <div class="menu-category">
+      <h2>🍪 Cookies</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/choco-chip.png" alt="Choco Chip Cookie" />
+          <h3>Choco Chip Cookie</h3>
+          <p>Golden-baked with gooey chocolate chips and a soft center.</p>
+          <span class="price">₹60</span>
+          <button class="order-btn"onclick="addToCart('choco chip cookie', 150)">Order Now</button>
+        </div>
+        <!-- Add more cookie items -->
+      </div>
+    </div>
+  </section>
+  <div class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+  </div>
+  
+  <!-- Cart Panel -->
+  <div id="cart-panel" class="cart-panel">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p class="cart-total">Total: ₹<span id="total">0</span></p>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

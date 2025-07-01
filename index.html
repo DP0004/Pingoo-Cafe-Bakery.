@@ -23,7 +23,7 @@
     <div class="hero-left">
       <h1>Delight in Every Bite</h1>
       <p>Freshly baked cakes, cookies, and bread delivered straight from our ovens to your heart.</p>
-      <a href="#" class="cta-btn">Explore Menu</a>
+      <a href="menu.html" class="cta-btn">Explore Menu</a>
     </div>
     <div class="hero-right">
       <img src="images/bakery-hero.jpeg" alt="Bakery Illustration" />
@@ -40,7 +40,7 @@
       <img src="images/lava-pastry.jpeg" alt="Pingoo Lava Pastry">
       <h3>Pingoo Lava Pastry</h3>
       <p>Our all-time bestseller – rich, gooey, and freshly baked with a molten center.</p>
-      <a href="#" class="card-btn">Order Now</a>
+      <button class="card-btn" onclick="addToCart('Lava Pastry', 450)">Order Now</button>
     </div>
 
     <!-- Card 2 -->
@@ -48,7 +48,8 @@
       <img src="images/Spiral-pastry-bomb.jpeg" alt="Choco Chip Muffin">
       <h3>Spiral-pastry-bomb</h3>
       <p>Soft and fluffy pastries loaded with real pistachio chocolate . A perfect treat!</p>
-      <a href="#" class="card-btn">Order Now</a>
+      <button class="card-btn" onclick="addToCart('Spiral-pastry-bomb', 750)">Order Now</button>
+
     </div>
 
     <!-- Card 3 -->
@@ -56,7 +57,7 @@
       <img src="images/berry-cake.jpeg" alt="Berry Cream Cake">
       <h3>Berry Cream Cake</h3>
       <p>A delightful burst of berries and whipped cream layered on soft sponge cake.</p>
-      <a href="#" class="card-btn">Order Now</a>
+      <button class="card-btn" onclick="addToCart('Berry-Cream-Cake', 650)">Order Now</button>
     </div>
 
   </div>
@@ -81,7 +82,79 @@
     </p>
   </div>
 </section>
+<!-- Floating Cart Button -->
+<div class="cart-icon" onclick="toggleCart()">
+  🛒 <span id="cart-count">0</span>
+</div>
 
+<!-- Cart Panel -->
+<div id="cart-panel" class="cart-panel">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <p class="cart-total">Total: ₹<span id="total">0</span></p>
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+
+<script>
+  const cart = [];
+  
+  function addToCart(name, price) {
+    const existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+      existingItem.qty += 1;
+    } else {
+      cart.push({ name, price, qty: 1 });
+    }
+    updateCart();
+  }
+
+  function updateCart() {
+    const cartList = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    const total = document.getElementById('total');
+
+    cartList.innerHTML = '';
+    let totalPrice = 0;
+    let itemCount = 0;
+
+    cart.forEach((item, index) => {
+      totalPrice += item.price * item.qty;
+      itemCount += item.qty;
+
+      const li = document.createElement('li');
+      li.innerHTML = `
+        ${item.name} - ₹${item.price} × ${item.qty}
+        <button onclick="changeQty(${index}, 1)">+</button>
+        <button onclick="changeQty(${index}, -1)">−</button>
+        <button onclick="removeItem(${index})">❌</button>
+      `;
+      cartList.appendChild(li);
+    });
+
+    cartCount.textContent = itemCount;
+    total.textContent = totalPrice;
+  }
+
+  function toggleCart() {
+    document.getElementById('cart-panel').classList.toggle('show');
+  }
+
+  function changeQty(index, delta) {
+    cart[index].qty += delta;
+    if (cart[index].qty <= 0) cart.splice(index, 1);
+    updateCart();
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+
+  function checkout() {
+    alert("Checkout feature coming soon!");
+  }
+</script>
 
 
 </body>
