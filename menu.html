@@ -2,80 +2,158 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu - Pingoo Cafe & Bakery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu | Pingoo Cafe & Bakery</title>
   <link rel="stylesheet" href="herostyle.css" />
-
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">🍰 Pingoo Cafe</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="#">Sign In</a>
-      <a href="#">Sign Up</a>
-    </nav>
+  <header class="menu-header">
+    <h1 class="logo">Pingoo Cafe</h1>
+    <div class="filters">
+      <button class="filter-btn active">Veg</button>
+      <button class="filter-btn">Egg</button>
+      <button class="filter-btn">Non-Veg</button>
+    </div>
   </header>
 
-  <!-- Menu Section -->
-  <section class="menu-section">
-    <h1>Our Menu</h1>
-
-    <div class="menu-category">
-      <h2>🍰 Cakes</h2>
-      <div class="menu-grid">
-        <div class="menu-card">
-          <img src="images/blackforest.jpg" alt="Black Forest Cake" />
-          <h3>Black Forest</h3>
-          <p>Rich chocolate cake layered with cherries and whipped cream.</p>
-          <span class="price">₹450</span>
-          <button class="order-btn">Order Now</button>
+  <section class="menu-container">
+    <!-- Item 1 -->
+    <div class="menu-item">
+      <img src="images/Chocolate Praline Cake.jpeg" alt="Chocolate Praline Cake" />
+      <div class="item-info">
+        <h3>Chocolate Praline Cake [800g]</h3>
+        <p>Eggless | 467.2 Kcal<br>A harmonious blend of hazelnut and chocolate.</p>
+        <div class="item-bottom">
+          <span class="price">₹1602</span>
+          <button class="add-btn">ADD</button>
         </div>
-        <!-- Add more cake items -->
       </div>
     </div>
 
-    <div class="menu-category">
-      <h2>🧁 Pastries</h2>
-      <div class="menu-grid">
-        <div class="menu-card">
-          <img src="images/lava-pastry.png" alt="Lava Pastry" />
-          <h3>Lava Pastry</h3>
-          <p>Molten center chocolate delight baked fresh daily.</p>
-          <span class="price">₹120</span>
-          <button class="order-btn"onclick="addToCart('lava pastry', 250)">Order Now</button>
+    <!-- Item 2 -->
+    <div class="menu-item">
+      <img src="images/rainbow-cake.jpeg" alt="Rainbow Cake" />
+      <div class="item-info">
+        <h3>Rainbow Cake [800g]</h3>
+        <p>Eggless | 265.45 Kcal<br>Taste the rainbow, and indulge in the sweetness of it.</p>
+        <div class="item-bottom">
+          <span class="price">₹1593</span>
+          <button class="add-btn">ADD</button>
         </div>
-        <!-- Add more pastry items -->
       </div>
     </div>
 
-    <div class="menu-category">
-      <h2>🍪 Cookies</h2>
-      <div class="menu-grid">
-        <div class="menu-card">
-          <img src="images/choco-chip.png" alt="Choco Chip Cookie" />
-          <h3>Choco Chip Cookie</h3>
-          <p>Golden-baked with gooey chocolate chips and a soft center.</p>
-          <span class="price">₹60</span>
-          <button class="order-btn"onclick="addToCart('choco chip cookie', 150)">Order Now</button>
+    <!-- Item 3 -->
+    <div class="menu-item">
+      <img src="images/Chocolate Truffle Cake (gluten-free).jpeg" alt="Chocolate Truffle Cake" />
+      <div class="item-info">
+        <h3>Chocolate Truffle Cake [800g]</h3>
+        <p>Rich, smooth and perfect for chocolate lovers.</p>
+        <div class="item-bottom">
+          <span class="price">₹1690</span>
+          <button class="add-btn">ADD</button>
         </div>
-        <!-- Add more cookie items -->
       </div>
     </div>
+    <!-- Item 4 -->
+<div class="menu-item">
+  <img src="images/Vanilla Cake with Strawberry Filling (1).jpeg" alt="Vanilla Bliss Cake" />
+  <div class="item-info">
+    <h3>Vanilla Bliss Cake [500g]</h3>
+    <p>Classic vanilla flavor topped with white chocolate shavings.</p>
+    <div class="item-bottom">
+      <span class="price">₹899</span>
+      <button class="add-btn">ADD</button>
+    </div>
+  </div>
+</div>
+
+<!-- Item 5 -->
+<div class="menu-item">
+  <img src="images/Create the ultimate Velvet Desserts with this red….jpeg" alt="Red Velvet Cake" />
+  <div class="item-info">
+    <h3>Red Velvet Cake [500g]</h3>
+    <p>Soft, rich layers with cream cheese frosting and a vibrant red hue.</p>
+    <div class="item-bottom">
+      <span class="price">₹1399</span>
+      <button class="add-btn">ADD</button>
+    </div>
+  </div>
+</div>
+
+<!-- Item 6 -->
+<div class="menu-item">
+  <img src="images/blue-berry.jpeg" alt="Blueberry Delight" />
+  <div class="item-info">
+    <h3>Blueberry Delight [500g]</h3>
+    <p>Moist sponge with a burst of real blueberry filling and cream topping.</p>
+    <div class="item-bottom">
+      <span class="price">₹1190</span>
+      <button class="add-btn">ADD</button>
+    </div>
+  </div>
+</div>
+<!-- Item 7 -->
+<div class="menu-item">
+  <img src="images/When it comes to desserts that capture hearts (and….jpeg" alt="Strawberry Cheesecake" />
+  <div class="item-info">
+    <h3>Strawberry Cheesecake [600g]</h3>
+    <p>Velvety cream cheese with a burst of fresh strawberries on a crunchy base.</p>
+    <div class="item-bottom">
+      <span class="price">₹1490</span>
+      <button class="add-btn">ADD</button>
+    </div>
+  </div>
+</div>
+
+<!-- Item 8 -->
+<div class="menu-item">
+  <img src="images/Chocolate Brownie Cake with Chocolate Hazelnut….jpeg" alt="Mocha Hazelnut Cake" />
+  <div class="item-info">
+    <h3>Mocha Hazelnut Cake [500g]</h3>
+    <p>Bold coffee flavors mixed with nutty hazelnut layers for the perfect pick-me-up.</p>
+    <div class="item-bottom">
+      <span class="price">₹1299</span>
+      <button class="add-btn">ADD</button>
+    </div>
+  </div>
+</div>
+
+<!-- Item 9 -->
+<div class="menu-item">
+  <img src="images/caramel-delight.jpeg" alt="Caramel Delight" />
+  <div class="item-info">
+    <h3>Caramel Delight [500g]</h3>
+    <p>A rich and moist cake layered with smooth caramel and cream toppings.</p>
+    <div class="item-bottom">
+      <span class="price">₹1350</span>
+      <button class="add-btn">ADD</button>
+    </div>
+  </div>
+</div>
+
   </section>
-  <div class="cart-icon" onclick="toggleCart()">
-    🛒 <span id="cart-count">0</span>
+  <!-- Cart Icon and Count -->
+<div onclick="toggleCart()" class="cart-icon">
+  🛒 Cart (<span id="cart-count">0</span>)
+</div>
+
+<!-- Cart Side Panel -->
+<div id="cart-panel" class="cart-panel">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+
+  <div class="billing">
+    <p>Items Total: ₹<span id="total">0</span></p>
+    <p>Delivery Charges: ₹<span id="delivery">0</span></p>
+    <hr>
+    <p><strong>Grand Total: ₹<span id="grand-total">0</span></strong></p>
   </div>
-  
-  <!-- Cart Panel -->
-  <div id="cart-panel" class="cart-panel">
-    <h2>Your Cart</h2>
-    <ul id="cart-items"></ul>
-    <p class="cart-total">Total: ₹<span id="total">0</span></p>
-    <button onclick="checkout()">Checkout</button>
-  </div>
+
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+ 
   <script src="script.js"></script>
 </body>
 </html>
